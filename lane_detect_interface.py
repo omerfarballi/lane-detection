@@ -42,7 +42,7 @@ class Thread(QThread):
         # cap = cv2.VideoCapture('C:\\Users\\oozer\\Desktop\\Driver state\\driver_test_video.mp4')#****************152******************
         # fourcc = cv2.VideoWriter_fourcc(*'mp4v')
         # out = cv2.VideoWriter('D:\\omar\\plaka\\output.mp4', fourcc, 20.0, (2688,1520))
-        cap = cv2.VideoCapture('C:\\Users\\oozer\\Desktop\\LAne detection\\vide2.mp4')#****************152******************'C:\\Users\\ozer\\Desktop\\LAne detection\\road.MP4'
+        cap = cv2.VideoCapture('C:\\Users\\omer\\Desktop\\LAne detection\\vide2.mp4')#****************152******************'C:\\Users\\ozer\\Desktop\\LAne detection\\road.MP4'
         
         # cap = cv2.VideoCapture('videoplayback.mp4')
         while True:
@@ -74,7 +74,7 @@ class Second(QMainWindow):
         super(Second, self).__init__(parent)
 
       
-        self.state='C:\\Users\\oozer\\Desktop\\LAne detection\\pred.png'
+        self.state='C:\\Users\\omer\\Desktop\\LAne detection\\pred.png'
         self.acceptDrops()
         # set the title
         self.setWindowTitle("Pred Image")
@@ -162,7 +162,7 @@ class App(QMainWindow):
     def on_click_save(self):
         
         
-        original_image_path=f'C:\\Users\\oozer\\Desktop\\LAne detection\\test_video\\image_.png'
+        original_image_path=f'C:\\Users\\omer\\Desktop\\LAne detection\\test_video\\image_.png'
         self.th.changePixmap.disconnect(self.setImage)
         cv2.imwrite(original_image_path,self.th.img)
         
