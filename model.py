@@ -5,10 +5,10 @@ def model_line():
     
 
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
-    model= torch.load("C:\\Users\\oozer\\Desktop\\Lane detection\\fastai_model.pth",  map_location=device)
+    model= torch.load("C:\\Users\\omer\\Desktop\\Lane detection\\fastai_model.pth",  map_location=device)
 
     
-    img = cv2.imread(str(get_image_files('C:\\Users\\oozer\\Desktop\\Lane detection\\test_video')[0]))
+    img = cv2.imread(str(get_image_files('C:\\Users\\omer\\Desktop\\Lane detection\\test_video')[0]))
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     def get_pred_for_mobilenet(model, img_array):
         with torch.no_grad():
@@ -27,5 +27,5 @@ def model_line():
     plt.imshow(ld_detection_overlay(img, left, right))
     
     
-    plt.imsave('C:\\Users\\oozer\\Desktop\\LAne detection\\pred.png',ld_detection_overlay(img, left, right))
-    return 'C:\\Users\\oozer\\Desktop\\LAne detection\\pred.png'
+    plt.imsave('C:\\Users\\omer\\Desktop\\LAne detection\\pred.png',ld_detection_overlay(img, left, right))
+    return 'C:\\Users\\omer\\Desktop\\LAne detection\\pred.png'
